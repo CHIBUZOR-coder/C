@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 // int main()
 // {
 //     int age;
@@ -21,17 +22,14 @@ int main()
     int year;
     printf("Enter Year");
     scanf("%d", &year);
-
-    if (year % 4 == 0)
-    {
-        if (year % 100 == 0)
-            if (year % 400 == 0)
-                printf("A leap Year");
-            else
-                printf("Not A leap Year");
-    }
+    if (year % 400 == 0)
+        printf("A Leap Year");
+    else if (year % 100 == 0)
+        printf("Not A Leap Year");
+    else if (year % 4 == 0)
+        printf("A Leap Year");
     else
-        printf("Not A leap Year");
+        printf("Not A Leap Year");
 
     return 0;
 }
